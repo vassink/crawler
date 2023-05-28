@@ -1,8 +1,8 @@
 #!/bin/bash
 ## Hola, Edu. Para usar este script, primero abre el terminal y cámbiate al directorio donde descargaste este archivo, escribiendo:
 ## cd ~/Carpeta/
-## Para escribir el nombre de la carpeta a la que te meterás, puedes presionar dos veces Tab para que te aparezcan a las que puedes
-## ir, o puedes hacer lo mismo luego de escribir las primeras letras del nombre del directorio para que se autocomplete y no lo tengas
+## Para escribir el nombre de la carpeta en la que te meterás, puedes presionar dos veces Tab para que te aparezcan a las que puedes
+## ir, o puedes hacer lo mismo luego de escribir las primeras letras del nombre de la carpeta para que se autocomplete y no lo tengas
 ## que escribir letra por letra.
 ## Luego, escribe esto para hacer ejecutable el script:
 ## sudo chmod +x ./rsp.sh
@@ -26,7 +26,8 @@ git push origin main
 if [[ -e ~/.bashrc ]]; then
     echo "alias rsp='git add -A && git commit -m && git push origin main'" >> ~/.bashrc
 else
-    echo "#!/bin/bash" > ~/.bashrc && echo "alias rsp='git add -A && git commit -m && git push origin main'" >> ~/.bashrc
+    echo "#!/bin/bash" > ~/.bashrc
+    echo "alias rsp='git add -A && git commit -m && git push origin main'" >> ~/.bashrc
 fi
 
 source ~/.bashrc
