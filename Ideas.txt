@@ -1,3 +1,9 @@
+### Comandos
+> git push origin main
+> escribe tu nombre de usuario en github
+> la contraseña no es la de tu cuenta, me la debes pedir, copiarla y pegarla en el terminal
+> listo, presiona enter
+
 ### El mundo
 El personaje podría ir por el laberinto con una linterna. Eso haría que el mundo fuera bien oscuro y el campo visual, limitado. Una razón de esto podría ser que la iluminación fue precarizada por una catástrofe.
 La oscuridad permitiría hacer mapas que esten a la interperie, porque alrededor sería todo negro, quizá con luces a lo lejos y el cielo rojizo y post-apocaliptico. En la interprerie, solo se vería el camino, y quizá se podrían hacer caminos que diverjan de ese, como atajos que causarían más inseguridad. El camino principal seria pavimentado y los atajos podrían ser de tierra. A través de ellos, uno se podría meter a un bosque o a una casa apartada. Te podrías meter dentro de casas o departamentos, a lo Silent Hill.
