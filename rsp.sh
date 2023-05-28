@@ -18,7 +18,7 @@
 git clone https://github.com/delibellus/crawler.git
 echo -e '\n\nAhora te pedirá la contraseña de tu mac para instalar un gestor que te permitirá subir aportes sin tener que escribir tus credenciales:'
 sudo brew install gh
-echo -e '\n\nAhora te pedirá escoger un protocolo. Escoge "https":'
+echo -e '\n\nAhora te pedirá escoger un protocolo. Escoge "github.com", luego "https", luego tipea "y" y luego escoge "token":'
 gh auth login
 echo -e '\n\nEsto te pedirá tu nombre de usuario en github y una contraseña que te dejé en el whatsapp:'
 git push origin main
