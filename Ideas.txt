@@ -1,0 +1,8 @@
+### El mundo
+El personaje podría ir por el laberinto con una linterna. Eso haría que el mundo fuera bien oscuro y el campo visual, limitado. Una razón de esto podría ser que la iluminación fue precarizada por una catástrofe.
+La oscuridad permitiría hacer mapas que esten a la interperie, porque alrededor sería todo negro, quizá con luces a lo lejos y el cielo rojizo y post-apocaliptico. En la interprerie, solo se vería el camino, y quizá se podrían hacer caminos que diverjan de ese, como atajos que causarían más inseguridad. El camino principal seria pavimentado y los atajos podrían ser de tierra. A través de ellos, uno se podría meter a un bosque o a una casa apartada. Te podrías meter dentro de casas o departamentos, a lo Silent Hill.
+Quizá la catástrofe hizo que la urbanización sea bien solitaria y varias casas o edificios estén abandonados. Podrían haber algunos miserables habitantes con los que tener pequeños diálogos.
+
+### Algoritmos
+pienso hacer dictionaries que asocien numeros a nombres de archivos, que serian los fondos. los mismos archivos se utilizarian para diferentes mapas, entonces seria una carpeta de archivos. cuando se cambia de ambiente, se cambia de carpeta. cada ambiente tiene distintos mapas o "sectores". entonces cada dictionary seria un mapa que utilizaria los mismos archivos en distintos ordenes. ciertas acciones serian asociadas a archivos especificos, por ejemplo si contienen una puerta. eso requeriria algo asi como un meta dictionary
+"caminar" seria avanzar dentro de un loop que quiza deberia tener un if
