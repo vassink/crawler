@@ -1,14 +1,19 @@
 #!/bin/bash
-## Hola, Edu. Para usar este script, primero abre el terminal y cámbiate al directorio donde descargaste el archivo, escribiendo:
-## cd ~/Carpeta/Carpeta/
-## Para escribir una carpeta, puedes presionar dos veces Tab para que te aparezcan a las que puedes ir, o puedes hacer lo mismo luego
-## de escribir las primeras letras del nombre del directorio para que se autocomplete y no lo tengas que escribir letra por letra.
+## Hola, Edu. Para usar este script, primero abre el terminal y cámbiate al directorio donde descargaste este archivo, escribiendo:
+## cd ~/Carpeta/
+## Para escribir el nombre de la carpeta a la que te meterás, puedes presionar dos veces Tab para que te aparezcan a las que puedes
+## ir, o puedes hacer lo mismo luego de escribir las primeras letras del nombre del directorio para que se autocomplete y no lo tengas
+## que escribir letra por letra.
 ## Luego, escribe esto para hacer ejecutable el script:
 ## sudo chmod +x ./rsp.sh
 ## Te pedirá la contraseña de tu mac.
 ## Luego, para ejecutar el script, escribe:
 ## ./rsp.sh
-## Y listo. Cualquier problema me avisas.
+## Ahora te cambias al directorio donde estará la carpeta donde tendrás el repositorio, nuestro proyecto:
+## cd ~/Carpeta/
+## Ahora, escribe el siguiente comando:
+## rsp
+## Y listo. Cualquier problema, me avisas.
 
 git clone https://github.com/delibellus/crawler.git
 echo -e '\n\nAhora te pedirá la contraseña de tu mac para instalar un gestor que te permitirá subir aportes sin tener que escribir tus credenciales:'
