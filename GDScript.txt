@@ -1,0 +1,164 @@
+GDScript es sensible a la indentación; si no se usa correctamente, no funciona. Aquí, las indentaciones son representadas con «\s».
+
+##### Elementos
+Para esta sección, establezco los siguientes elementos básicos:
+1) Lugares en la memoria, los cuales almacenan valores de distintos tipos.
+2) Nombres simbólicos de los lugares en la memoria.
+Un nombre simbólico siempre corresponde a un mismo lugar en la memoria. Aquí, el par nombre-espacio recibirá llevará el término «espacio nombrado». Los espacios nombrados pueden ser:
+  - Declarados: Son creados declarándolos. Las declaraciones pueden ser visibles y editables, o no.
+  - Activados: La activación tiene una sintaxis diferente a las declaraciones.
+
+## Variables y Constantes
+Cuando el valor que un espacio nombrado puede contener es variable, en conjunto forman una «variable».
+- Las variables pueden ser declaradas sin especificar el tipo de su valor:
+  → var nombre = valor
+- O pueden ser declaradas especificando el tipo de su valor:
+  → var nombre: tipo = valor
+Cuando el valor no es variable, en conjunto forman una «constante».
+- Las variables pueden ser declaradas sin especificar el tipo de su valor:
+  → const nombre = valor
+- O pueden ser declaradas especificando el tipo de su valor:
+  → const nombre: tipo = valor
+En las variables y en las constantes, el valor que almacena el espacio nombrado no puede ser un cuerpo de código.
+
+## Funciones
+En las funciones, lo que almacena el espacio nombrado es un cuerpo de código. La sintaxis de declaración de funciones permite la declaración complementaria de una variable que será usada dentro del cuerpo, tan solo insertando su nombre simbólico junto al nombre simbólico de la función. En este contexto, la variable lleva el nombre de «argumento».
+Las funciones pueden ser declaradas sin especificar el tipo de el valor de sus argumentos:
+  → func nombre(nombre_de_argumento): \s cuerpo
+O especificando el tipo de el valor de sus argumentos:
+  → func nombre(argumento: tipo): \s cuerpo
+En la sintaxis de activación, el espacio que ocupaba el nombre simbólico del argumento es ocupado por su valor:
+  → nombre(valor_de_argumento)
+El último propósito de las funciones es el de no tener que repetir la escritura de cierto código.
+
+# Valores de Variables, Constantes y Argumentos
+Estos pueden ser datos, de los cuales existen los siguientes tipos:
+- «true» o «false», los valores booleanos.
+- Números: Enteros (int), decimales (float) o complejos (complex). Para convertir un número de un tipo a otro:
+  · int(número)
+  · float(número)
+  · complex(número)
+- Secuencias: en el sentido de que sus elementos tienen un orden fijo y por lo tanto son indexados.
+  · Texto: Comprendido como una secuencia de carácteres alfanuméricos y/o simbólicos. Tiene que ir entre comillas.
+  · Listas: Son modificables y permiten datos duplicados.
+    → ["uno", "dos", "dos"]
+  · Tuple: No son modificables y permiten datos duplicados.
+    → ("uno", "dos", "dos")
+  · Rango: Secuencia de números naturales que se despliega desde uno inicial a uno final, y con cierto patrón de sucesión.
+    → range(final)
+    → range(inicial, final)
+    → range(inicial, final, patrón)
+  Los elementos de secuencias pueden ser seleccionados individualmente con la sintaxis:
+    → nombre.index(elemento)
+- Conjuntos, en el sentido de que sus elementos no tienen un orden fijo y por lo tanto no son indexados:
+  · Sets: Son modificables excepto por sus elementos, y permiten datos duplicados.
+    → {"uno", "dos", "tres"}
+  · Frozensets: No son modificables y permiten datos duplicados. Solo pueden ser creados a partir de secuencias o sets ya
+    existentes.
+    → frozenset(nombre de secuencia o set)
+- Diccionarios: Asociaciones entre datos. Tienen un orden fijo, no son indexados, son modificables y no permiten datos duplicados.
+  Si es tal cual declarar variables, ¿cuál es el sentido de los diccionarios?
+  Cada nombre dentro de un diccionario es declarado tal como las variables, solo que poniendo el nombre entre comillas.
+  → {"uno": 1, "dos": 2, "tres": 3}
+Los tipos de datos que se pueden especificar en las declaraciones de los tipos de espacios nombrados en cuestión, son:
+- int
+- float
+- bool
+- String
+Los valores también pueden ser nombres simbólicos ya declarados.
+
+## Expresiones
+Un conjunto en el que datos y operadores adquieren funciones. Su notación es la misma que en matemática, con algunas excepciones. Las expresiones pueden ser:
+- Computadas, para cuyo caso debe omitirse en el signo «=», el cual está reservado para asignación de valores a espacios nombrados.
+- Evaluadas, para cuyo caso 
+
+##### Estructuras de Control
+
+Las líneas de código se intepretan y se ejecutan de arriba a abajo. Este procedimiento no siempre se ajusta bien a lo que se intenta hacer con el código, o simplemente no se ajusta; por lo que se hace necesario cambiar el flujo por medio de las siguientes herramientas o «controles de flujo».
+Lo que los controles de flujo tienen en común, es que condicionan la ejecución de ciertas líneas de código. Las condiciones deben ser establecidas, y consisten en un valor booleano escrito directamente o evaluado a partir de una comparación entre variables, constantes o datos. Las comparaciones pueden ser las siguientes:
+- Si un elemento es mayor que otro: x > y
+- Lo opuesto: x < y
+- Si ambos elementos son iguales: x = y
+- Lo opuesto: x != y
+Otro punto en común entre los controles de flujo, es que pueden establecer más de una alternativa condicional. En general, estas condiciones adicionales son indefinidas excepto en que son distintas de la primera, y son englobadas bajo el término «else:», del cual siguen las líneas de código relativas.
+Por último, el código condicional puede ser interrumpido de dos formas:
+- Con «continue», saltándose las líneas de código siguientes para reiterar el control de flujo.
+- Con «break», deteniendo el control de flujo.
+
+## If
+Propiedades:
+- Flujo lineal, aunque condicional.
+- Modificar los valores en sus expresiones condicionales no tiene efecto debido al flujo lineal.
+    · Las únicas maneras de alterar este comportamiento es guardando el control en una función, cuyos argumentos tendrían que ser las
+      variables evaluadas en las expresiones condicionales; o alterando el valor de esas variables en un control de flujo que controle
+      el flujo de «if».
+- Permite especificar condiciones adicionales con el término «elif» seguido de una expresión.
+
+Algoritmo:
+- Evaluar una expresión.
+- Proceder con la ejecución de las siguientes líneas de código si la evaluación da «verdadero».
+
+Sintaxis:
+→ if condición: \s código; elif condición: \s código; else: \s código;
+
+## While
+Propiedades:
+- Su flujo es circular.
+- Modificar los valores en sus expresiones condicionales sí tiene efecto porque, gracias al flujo circular, son evaluadas más de una
+  vez.
+- Sus iteraciones dependen de que su expresión sea evaluada como verdadera, lo cual puede ser cambiado por su código; aunque es posible
+  que los valores sean constantes, cuando la expresión es «true».
+
+Algoritmo:
+- Evaluar una expresión.
+- Si da «verdadero», proceder con la ejecución de las siguientes líneas de código código, las cuales modifican los valores de la
+  expresión condicional.
+- Repetir la ejecución hasta que los valores de la expresión produzcan que esta dé «falso».
+
+Sintaxis:
+→ while condición: \s código else: \s código;
+
+## For
+Propiedades:
+- Su flujo es circular.
+- No tiene efecto modificar los valores de sus expresiones condicionales, porque son modificadas automáticamente por el número de
+  iteraciones.
+- Toma un grupo de elementos, y por cada uno de ellos, repite la ejecución de las líneas de código condicionales. A cada unidad del
+  grupo le es asignado un único nombre simbólico que puede ser usado dentro del código condicional.
+
+Algoritmo:
+- Ejecutar código por cada miembro de un grupo.
+
+Sintaxis:
+→ for nombre_unidad in grupo_elementos: \s código; else: \s código;
+
+
+##### Algoritmos
+
+## Sentido
+Un algoritmo es una secuencia de instrucciones que está preestablecida de acuerdo a una intención o conjunto de intenciones.
+Como en los idiomas, estas intenciones deben ser mediadas por los componentes y aspectos de un lenguaje.
+Esta mediación puede afectar la intención, llevando a la adopción de objetivos que nos aproximen a obtener lo que buscamos.
+Por lo tanto, el planteamiento clave al elaborar un algoritmo es qué posibilidad del lenguaje se aproxima más a lo que buscamos. Esto es la «idea central».
+En segundo lugar, hay que concretar esa posibilidad encontrando los detalles que requiere. Estos detalles son las «ideas secundarias».
+
+## Recursos de Pensamiento
+Para ideas centrales, generalmente:
+- Flujos lineales o circulares.
+- Expresiones con valores que no cambiarán.
+- Expresiones con valores que cambiarán automáticamente:
+  · Según la secuencia de elementos en un grupo («for»).
+  · Según lo que se haga en cierto código («while»).
+  · Con la ejecución de código externo al control de flujo («if»).
+
+Para ideas secundarias, generalmente:
+- Código que aparece solo una vez (declaraciones en global scope).
+- Código que aparece múltiples veces en un código (función).
+
+Para ideas en general:
+- Datos simples.
+- Secuencias de datos.
+- Conjuntos de datos.
+- Diccionarios.
+- Asignación variable o fija de datos a espacios nombrados.
+- Asignación variable o fija de espacios nombrados a otros.
