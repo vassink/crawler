@@ -12,3 +12,4 @@ Quizá la catástrofe hizo que la urbanización sea bien solitaria y varias casa
 ### Algoritmos
 pienso hacer dictionaries que asocien numeros a nombres de archivos, que serian los fondos. los mismos archivos se utilizarian para diferentes mapas, entonces seria una carpeta de archivos. cuando se cambia de ambiente, se cambia de carpeta. cada ambiente tiene distintos mapas o "sectores". entonces cada dictionary seria un mapa que utilizaria los mismos archivos en distintos ordenes. ciertas acciones serian asociadas a archivos especificos, por ejemplo si contienen una puerta. eso requeriria algo asi como un meta dictionary
 "caminar" seria avanzar dentro de un loop que quiza deberia tener un if
+la pantalla debería representar 12 imágenes que se acoplan según el área, para hacer distintas combinaciones entre murallas, puertas y pasillos.
