@@ -10,6 +10,7 @@ La oscuridad permitiría hacer mapas que esten a la interperie, porque alrededor
 Quizá la catástrofe hizo que la urbanización sea bien solitaria y varias casas o edificios estén abandonados. Podrían haber algunos miserables habitantes con los que tener pequeños diálogos.
 
 ### Narrativa
+
 El juego no tendría una narrativa directa o una historia lineal, si no una que se cuenta travez del lore de los objetos y sus descripciónes, generalmente de manera lírica. Esto no quiere decir que como creadores no podamos dar una historia al juego, pero la historia completa solo la sabremos nosotros, ya que lo importante es que el jugador pueda reinterpretar y construir su propia historia a travez de su propia experiencia.
 
 ### Algoritmos
